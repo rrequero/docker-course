@@ -1,0 +1,22 @@
+{
+  "name": "refresh-count-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./src/index.js",
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "koa": "^2.5.3",
+    "koa-views": "^6.1.4",
+    "mongoose": "^5.2.18"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
