@@ -1,0 +1,26 @@
+version: "3"
+services:
+  mongo:
+    image: mongo:4.0.2
+    volumes:
+      - mongo_conf:/data/config_db
+      - mongo_data:/data/db
+    restart: always
+    networks: 
+      - default
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    restart: always
+    depends_on:
+      - mongo
+    networks: 
+      - default
+volumes:
+  mongo_conf:
+  mongo_data:
+networks:
+  default:
