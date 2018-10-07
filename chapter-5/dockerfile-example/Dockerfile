@@ -3,7 +3,10 @@ LABEL maintainer="Raul Requero<rrequero@gmail.com>"
 LABEL version="1.0"
 LABEL description="Dockerfile example"
 
-RUN apk update && apk add nginx && rm -rf /var/cache/apk/* && mkdir -p /run/nginx
+RUN apk update && \
+    apk add nginx && \
+    rm -rf /var/cache/apk/* && \
+    mkdir -p /run/nginx
 
 COPY default.conf /etc/nginx/conf.d/default.conf
 
